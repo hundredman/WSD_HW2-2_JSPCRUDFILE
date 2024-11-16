@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Test</title>
+</head>
+<body>
+<h2>데이터 입력 폼</h2>
+<form action="form_ok.jsp" method="post">
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label>성별:</label>
+    <input type="radio" id="male" name="gender" value="남성">
+    <label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="여성">
+    <label for="female">여성</label><br><br>
+
+    <label>관심사:</label>
+    <input type="checkbox" name="interest" value="운동">운동
+    <input type="checkbox" name="interest" value="독서">독서
+    <input type="checkbox" name="interest" value="영화">영화<br><br>
+
+    <label for="city">도시:</label>
+    <select id="city" name="city">
+        <option value="서울">서울</option>
+        <option value="부산">부산</option>
+        <option value="대구">포항</option>
+    </select><br><br>
+
+    <button type="submit">전송</button>
+</form>
+</body>
+</html>
