@@ -9,21 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fc3d592-91b4-439b-8271-dbdc7873d974" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/common/FileUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/bean/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/bean/BoardVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/common/JDBCUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/dao/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/dao/BoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/util/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/util/JDBCUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/delete_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/delete_ok.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit_ok.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/write_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write_ok.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="2fc3d592-91b4-439b-8271-dbdc7873d974" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
