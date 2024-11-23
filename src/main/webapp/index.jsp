@@ -2,6 +2,7 @@
 <%@ page import="org.example.jspcruddb.dao.BoardDAO" %>
 <%@ page import="org.example.jspcruddb.bean.BoardVO" %>
 <%@ page import="java.util.List" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,18 +28,26 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExample09">
             <form class="d-flex my-2 my-md-0" method="get" action="index.jsp">
-                <select class="custom-select d-block rounded-pill me-2 p-2 border-gray-custom" name="searchBy"
+                <select class="custom-select d-block p-2 border-gray-custom bd-round-left" name="searchBy"
                         required="">
                     <option value="">Search by ...</option>
                     <option value="title">Title</option>
                     <option value="writer">Writer</option>
                 </select>
 
-
-                <input class="form-control bd-round-left" type="text" name="search" aria-label="Search">
+                <input class="form-control rounded-0" type="text" name="search" aria-label="Search">
                 <button class="btn btn-primary me-1 bd-round-right" type="submit">Search</button>
             </form>
 
+            <!-- 정렬 기준 선택 -->
+            <form class="d-flex my-2 my-md-0" method="get" action="index.jsp">
+                <select class="custom-select d-block p-2 border-gray-custom bd-round-left" name="orderBy" required="">
+                    <option value="">Order by ...</option>
+                    <option value="title">정렬 기준: 제목</option>
+                    <option value="regdate">정렬 기준: 작성일</option>
+                </select>
+                <button class="btn btn-primary me-1 bd-round-right" type="submit">Sort</button>
+            </form>
 
             <a class='btn btn-primary rounded-pill' href='write.jsp' role='button'>Add</a>
         </div>
@@ -55,6 +64,7 @@
                 <th scope="col">hit</th>
                 <th scope="col">created_date</th>
                 <th scope="col">edited_date</th>
+                <th scope="col">image</th>
                 <th scope="col">Menu</th>
             </tr>
             </thead>
@@ -62,13 +72,21 @@
             <%
                 String search = request.getParameter("search");
                 String searchBy = request.getParameter("searchBy");
+                String orderBy = request.getParameter("orderBy");
 
                 BoardDAO dao = new BoardDAO();
                 List<BoardVO> boardList;
 
+                // 검색 조건이 있을 경우 처리
                 if (search != null && !search.trim().isEmpty()) {
                     boardList = dao.searchBoardList(search, searchBy);
-                } else {
+                }
+                // 정렬 기준이 있을 경우 처리
+                else if (orderBy != null && !orderBy.trim().isEmpty()) {
+                    boardList = dao.getBoardList(orderBy);
+                }
+                // 기본 게시판 목록
+                else {
                     boardList = dao.getBoardList();
                 }
 
@@ -86,6 +104,16 @@
                 <td><%= board.getRegdate() != null ? new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(board.getRegdate()) : "N/A" %>
                 </td>
                 <td><%= board.getUpdatedate() != null ? new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(board.getUpdatedate()) : "N/A" %>
+                </td>
+                <td>
+                    <%
+                        String photo = board.getFilename();
+                        if (photo != null && !photo.isEmpty()) {
+                    %>
+                    <img src="upload/<%= photo %>" alt="Photo" width="50">
+                    <% } else { %>
+                    N/A
+                    <% } %>
                 </td>
                 <td>
                     <div class="d-flex">

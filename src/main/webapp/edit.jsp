@@ -18,18 +18,14 @@
     <h1>글 수정</h1>
 
     <%
-        // Retrieve the post ID (seq) from the request
         int seq = Integer.parseInt(request.getParameter("id"));
-
-        // Create a BoardDAO object to fetch data from the database
         BoardDAO dao = new BoardDAO();
-
-        // Get the board details from the database based on the ID (seq)
         BoardVO board = dao.getBoard(seq);
     %>
 
-    <form action="edit_ok.jsp" method="post">
+    <form action="edit_ok.jsp" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<%= seq %>">
+        <input type="hidden" name="currentPhoto" value="<%= board.getFilename() %>"> <!-- 기존 파일명 전달 -->
 
         <div class="mb-3">
             <label for="title" class="form-label">제목</label>
@@ -44,6 +40,15 @@
         <div class="mb-3">
             <label for="content" class="form-label">내용</label>
             <textarea class="form-control" id="content" name="content" rows="5" required><%= board.getContent() %></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label">첨부 사진</label>
+            <% String currentImage = board.getFilename(); %>
+            <% if (currentImage != null && !currentImage.isEmpty()) { %>
+            <p>현재 이미지: <img src="upload/<%= currentImage %>" alt="Current Image" width="100"></p>
+            <% } %>
+            <input type="file" class="form-control" id="photo" name="photo">
         </div>
 
         <button type="submit" class="btn btn-primary">수정</button>

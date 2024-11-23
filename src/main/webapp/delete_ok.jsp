@@ -42,7 +42,7 @@
         }
     %>
 
-    <a href="index.jsp" class="btn btn-primary">목록으로 돌아가기</a>
+    <br><a href="index.jsp" class="btn btn-primary">목록으로 돌아가기</a>
 
     <%@ include file="inc/bottom.jsp"%>
 </div>

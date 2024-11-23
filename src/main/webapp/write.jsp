@@ -14,19 +14,27 @@
     <%@include file="inc/top.jsp"%>
 
     <h1>새 글 작성</h1>
-    <form action="write_ok.jsp" method="post" onsubmit="return validateForm()">
+    <form action="write_ok.jsp" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
         <div class="mb-3">
             <label for="title" class="form-label">제목</label>
             <input type="text" class="form-control" id="title" name="title" required>
         </div>
+
         <div class="mb-3">
             <label for="writer" class="form-label">작성자</label>
             <input type="text" class="form-control" id="writer" name="writer" required>
         </div>
+
         <div class="mb-3">
             <label for="content" class="form-label">내용</label>
             <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
         </div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label">첨부 사진</label>
+            <input type="file" class="form-control" id="photo" name="photo">
+        </div>
+
         <button type="submit" class="btn btn-primary">저장</button>
         <a href="index.jsp" class="btn btn-secondary">취소</a>
     </form>

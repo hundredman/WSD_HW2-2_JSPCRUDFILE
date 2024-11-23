@@ -25,11 +25,4 @@ public class JDBCUtil {
             throw new RuntimeException(e);
         }
     }
-
-//    public static void main(String[] args) {
-//        Connection con = JDBCUtil.getConnection();
-//        if (con != null) {
-//            System.out.println("Database connection established");
-//        }
-//    }
 }

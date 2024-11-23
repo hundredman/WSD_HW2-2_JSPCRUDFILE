@@ -32,6 +32,9 @@
             // Create a BoardDAO object to fetch data from the database
             BoardDAO dao = new BoardDAO();
 
+            // Increase view count (hit)
+            dao.incrementHit(seq);
+
             // Get the board details from the database based on the ID (seq)
             BoardVO board = dao.getBoard(seq);
         %>
@@ -57,6 +60,22 @@
                 <div class="mb-3">
                     <label>Content</label>
                     <div class="d_div"><%= board.getContent() %></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- image -->
+                <div class="mb-3">
+                    <label>Image</label>
+                    <%
+                        String photo = board.getFilename();
+                        if (photo != null && !photo.isEmpty()) {
+                    %>
+                    <div class="d_div">
+                        <img src="upload/<%= photo %>" alt="Post Image" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                    <% } else { %>
+                    N/A
+                    <% } %>
                 </div>
             </div>
             <button class="btn btn-primary btn-lg btn-block mt-5 w-100" type="submit" onclick="location.href='index.jsp'">

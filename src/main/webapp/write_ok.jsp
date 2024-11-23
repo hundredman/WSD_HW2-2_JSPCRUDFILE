@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="org.example.jspcruddb.dao.BoardDAO" %>
+<%@ page import="org.example.jspcruddb.bean.BoardVO" %>
+<%@ page import="org.example.jspcruddb.common.FileUpload" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <html>
@@ -15,13 +17,21 @@
 <div class="container">
     <%@include file="inc/top.jsp"%>
 
-    <jsp:useBean id="u" class="org.example.jspcruddb.bean.BoardVO" />
-    <jsp:setProperty name="u" property="*" />
-
     <%
-        BoardDAO boardDAO = new BoardDAO();
-        int i = boardDAO.insertBoard(u);
-        String msg = (i > 0) ? "데이터 추가 성공!" : "[에러] 데이터 추가 실패";
+        String msg;
+        try {
+            FileUpload fileUpload = new FileUpload();
+            BoardVO vo = fileUpload.uploadFile(request);
+
+            BoardDAO dao = new BoardDAO();
+            int result = dao.insertBoard(vo);
+
+            msg = (result > 0) ? "데이터 추가 성공!" : "[에러] 데이터 추가 실패";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            msg = "[에러] 처리 중 문제가 발생했습니다.";
+        }
     %>
 
     <script>

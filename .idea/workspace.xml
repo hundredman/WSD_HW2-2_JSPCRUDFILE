@@ -10,7 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fc3d592-91b4-439b-8271-dbdc7873d974" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/common/FileUpload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/bean/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/bean/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/common/JDBCUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/dao/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/dao/BoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/util/JDBCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/jspcruddb/util/JDBCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/delete_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/delete_ok.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit_ok.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/write_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write_ok.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +75,7 @@
     &quot;Tomcat Server.Tomcat 9.0.962.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kim/Documents/2024-2/Web Service Development/java/JSPCRUDDB File&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -200,11 +213,24 @@
       <workItem from="1731545944809" duration="50000" />
       <workItem from="1731545999038" duration="78000" />
       <workItem from="1731633117278" duration="15787000" />
-      <workItem from="1731773466148" duration="8496000" />
+      <workItem from="1731773466148" duration="8942000" />
+      <workItem from="1731892298914" duration="1112000" />
+      <workItem from="1732167284374" duration="17092000" />
+      <workItem from="1732364526564" duration="9926000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

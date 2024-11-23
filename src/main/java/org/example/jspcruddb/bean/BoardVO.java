@@ -15,10 +15,12 @@ public class BoardVO {
     private Timestamp regdate;
     private Timestamp updatedate;
     private int cnt;
+    private String filename;
 
-    public BoardVO(String title, String writer, String content) {
+    public BoardVO(String title, String writer, String content, String filename) {
         this.title = title;
         this.writer = writer;
         this.content = content;
+        this.filename = filename;
     }
 }
